@@ -83,10 +83,3 @@ Run these commands from the project root:
 
 
 ---
-
-
-```
-
----
-
-```
