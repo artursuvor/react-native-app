@@ -21,7 +21,7 @@ A React Native application built using React Native CLI.
    ```bash
    git clone <repository_url>
    cd MyApp
-````
+
 
 2. Install dependencies:
 
