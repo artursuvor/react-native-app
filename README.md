@@ -1,27 +1,27 @@
-Sure! Here’s the README in English with the same info:
 
-````markdown
 # MyApp
 
-A React Native application.
+A React Native application built using React Native CLI.
 
 ---
 
-## Requirements
+## 🚀 Requirements
 
-- Node.js (latest LTS recommended)
-- Java Development Kit (JDK) 17
-- Android Studio with configured Android SDK and emulator/device
-- React Native CLI (not Expo)
+- **Node.js** (latest LTS recommended)
+- **Java Development Kit (JDK) 17**
+- **Android Studio** with configured Android SDK and emulator/device
+- **React Native CLI** (this project does **not** use Expo)
 
 ---
 
-## Installation
+## 📦 Installation
 
 1. Clone the repository:
+
    ```bash
    git clone <repository_url>
-````
+   cd MyApp
+
 
 2. Install dependencies:
 
@@ -29,25 +29,30 @@ A React Native application.
    npm install
    ```
 
-3. Make sure environment variables are set:
+3. Set up environment variables:
 
-   * `JAVA_HOME` points to your JDK 17 installation folder
-   * `ANDROID_HOME` points to your Android SDK folder (e.g. `C:\Users\artur\AppData\Local\Android\Sdk`)
-   * Add Android SDK `platform-tools` and `tools` directories to your `PATH`
+   * `JAVA_HOME` should point to your JDK 17 installation directory.
+   * `ANDROID_HOME` should point to your Android SDK directory, for example:
+     `C:\Users\artur\AppData\Local\Android\Sdk`
+   * Add the following SDK tools to your system `PATH`:
+
+     * `${ANDROID_HOME}/platform-tools`
+     * `${ANDROID_HOME}/tools`
+     * `${ANDROID_HOME}/tools/bin`
 
 ---
 
-## Running on Android
+## ▶️ Running the App on Android
 
-1. Start an Android emulator or connect an Android device.
+1. Start an Android emulator via Android Studio or connect a physical Android device with USB debugging enabled.
 
-2. Start the Metro Bundler (if not running):
+2. Start Metro Bundler (if not already running):
 
    ```bash
    npx react-native start
    ```
 
-3. In another terminal, run:
+3. In a new terminal window, run the app on the device/emulator:
 
    ```bash
    npx react-native run-android
@@ -55,30 +60,26 @@ A React Native application.
 
 ---
 
-## Notes
+## ⚠️ Important Notes
 
-* iOS build and run are **not supported** on Windows. To develop for iOS, you need macOS with Xcode.
-* This project uses React Native CLI (no Expo).
-* ESLint and Prettier are configured for code quality.
-* Jest is set up for testing with the default React Native preset.
+* **iOS is not supported.**
+* This project uses **React Native CLI** — Expo is not used.
+* ESLint and Prettier are preconfigured to enforce code style and quality.
+* Jest is configured for running tests with the React Native preset.
 
 ---
 
-## Useful commands
+## 🛠 Useful Scripts
 
-* Run linter:
+Run these commands from the project root:
 
-  ```bash
-  npm run lint
-  ```
+| Command        | Description                      |
+| -------------- | -------------------------------- |
+| `npm run lint` | Run ESLint to check code quality |
+| `npm test`     | Run Jest tests                   |
+| `npm start`    | Start the Metro bundler          |
 
-* Run tests:
+---
 
-  ```bash
-  npm test
-  ```
 
-```
-
-Want me to help add `package.json` scripts or anything else?
-```
+---
