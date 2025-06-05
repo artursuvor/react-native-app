@@ -1,4 +1,7 @@
 {
   "name": "MyApp",
-  "displayName": "MyApp"
+  "displayName": "MyApp",
+  "version": "1.0.0",
+  "description": "My awesome React Native app",
+  "orientation": "portrait"
 }
