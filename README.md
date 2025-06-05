@@ -1,6 +1,4 @@
-Конечно, могу сделать README чуть более структурированным, читаемым и добавить полезные советы для удобства. Вот улучшенный вариант твоего README:
 
-````markdown
 # MyApp
 
 A React Native application built using React Native CLI.
