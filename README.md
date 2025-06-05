@@ -1,4 +1,3 @@
-Sure! Here’s the README in English with the same info:
 
 ````markdown
 # MyApp
