@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 
 function Counter(): React.JSX.Element {
   const [count, setCount] = useState(0);
@@ -14,9 +14,10 @@ function Counter(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
     padding: 20,
     alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
   },
   text: {
     fontSize: 20,
