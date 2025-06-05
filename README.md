@@ -62,7 +62,7 @@ A React Native application built using React Native CLI.
 
 ## ⚠️ Important Notes
 
-* **iOS is not supported on Windows.** To build and run on iOS, you need a macOS environment with Xcode installed.
+* **iOS is not supported.**
 * This project uses **React Native CLI** — Expo is not used.
 * ESLint and Prettier are preconfigured to enforce code style and quality.
 * Jest is configured for running tests with the React Native preset.
