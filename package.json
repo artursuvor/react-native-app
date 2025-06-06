@@ -10,7 +10,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-picker/picker": "^2.11.0",
+    "dayjs": "^1.11.13",
+    "i18next": "^25.2.1",
     "react": "19.0.0",
+    "react-i18next": "^15.5.2",
     "react-native": "0.79.2",
     "react-native-vector-icons": "^10.2.0"
   },

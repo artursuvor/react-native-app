@@ -1,13 +1,20 @@
-import * as React from 'react';
-import { SafeAreaView } from 'react-native';
-import Counter from './components/Counter';
+import React from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import { LanguageProvider } from './context/LanguageContext';
+import Calendar from './components/Calendar';
 
-function App(): React.JSX.Element {
+export default function App() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Counter />
-    </SafeAreaView>
+    <LanguageProvider>
+      <SafeAreaView style={styles.container}>
+        <Calendar />
+      </SafeAreaView>
+    </LanguageProvider>
   );
 }
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});

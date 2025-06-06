@@ -1,0 +1,13 @@
+{
+  "greeting": "Привет",
+  "month_year": "{{month}} {{year}}",
+  "days": {
+    "sun": "Вс",
+    "mon": "Пн",
+    "tue": "Вт",
+    "wed": "Ср",
+    "thu": "Чт",
+    "fri": "Пт",
+    "sat": "Сб"
+  }
+}
