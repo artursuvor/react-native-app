@@ -1,0 +1,41 @@
+name: Native application checks
+on:
+  pull_request:
+  push:
+    branches: [main, master, codex/security-audit-2026-10-30]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.18.0'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - run: npm test -- --runInBand
+      - run: npm run lint
+      - name: Build the Android JavaScript bundle
+        run: npm exec -- react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/index.android.bundle --assets-dest android/bundle-assets --max-workers 2
+      - name: Compile an Android debug APK
+        working-directory: android
+        run: bash ./gradlew assembleDebug -PreactNativeArchitectures=x86_64 --max-workers=2 --no-daemon
+      - name: Record all dependency findings
+        continue-on-error: true
+        run: npm audit --json > dependency-audit.json
+      - name: Reject high and critical findings
+        run: npm audit --audit-level=high
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dependency-audit
+          path: dependency-audit.json
